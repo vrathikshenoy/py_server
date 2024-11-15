@@ -10,7 +10,7 @@ ms = pickle.load(open('minmaxscaler.pkl', 'rb'))
 
 # creating flask app
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "https://agrotest.vercel.app"}})  # Enable CORS for specific routes
+CORS(app, resources={r"/api/*": {"origins": "https://localhost:3001"}})  # Enable CORS for specific routes
 
 @app.route('/api/predict', methods=['POST'])
 def predict():
